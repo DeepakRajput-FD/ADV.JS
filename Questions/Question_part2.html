@@ -47,16 +47,70 @@
    </h5>
    
    <h4> 9. What does the splice() method do in JavaScript arrays?  </h4>
+   <h5>
+    splice() method is used to change the content of an array. splice method provide create , delete and replace existing element with existing ones. and it is affect on original array.   
+   </h5>
    <h4> 10. How would you check if an element exists in an array in JavaScript without using loops?</h4> 
+   <h5>
+        There are two methods used to check if an element exists in an array.
+        (1)includes provide boolean value (2)indexOf method provide with value.   
+   </h5>
+   <input type="text" placeholder="Enter Value" id="input1" >
+   <button onclick="check()">
+    check
+   </button>
+
    <h4> 11. Explain the difference between slice() and splice() methods in JavaScript arrays. </h4>
+   <h5>
+    slice =>
+    The term ‘slice’ literally means to cut something into pieces. It is used to cut out elements from an array. It does not affect the original array.
+    <br>
+    Syntax
+    <br>
+    array.slice(start, end)
+    <br>
+    start denotes the index at which the array starts slicing.
+        <br>
+    end denotes the index at which the array stops slicing.
+    <br>
+    <br>
+    splice =>
+    It is used to remove elements from an array or replace them.
+    <br>
+    Syntax
+    <br>
+    array.splice(start, deleteCount, newElem1, newElem2, ..., newElemN);
+    <br>
+    start denotes the index from which the method will start its operation on the array.
+    <br>
+    deleteCount denotes the number of values to be deleted from the start. If the value is 0, nothing will be deleted.
+    <br>
+    newElem1 to newElemN denote the values that would be added after the start.
+    </h5>
    <h4> 12. How do you add a new property to an existing JavaScript object? </h4>
+
+   <h5>
+        => Dot Notation:
+
+    Use the object's name followed by a dot (.), the new property name, and an assignment operator = to assign a value.
+    Syntax: object.newPropertyName = value;
+    <br>
+      => Bracket Notation
+    Use square brackets [] to enclose the property name as a string, followed by an assignment operator = to assign a value.
+    This method is useful for dynamic property names .
+   </h5>
+
    <h4> 13. What's the difference between hasOwnProperty() and in operator in JavaScript object handling?</h4>
 
+   <h5>
 
+   </h5>
 
    <script>
 
-    // // primitive values
+    //question 7
+    
+       // // primitive values
     // let string='string';
     // let number=123;
     // let Boolean2=true;
@@ -66,6 +120,7 @@
     // let drek=undefined;
     // console.log(string + number +Boolean2 +num2 +value1 +drek );
     // console.log(sym);
+
 
     // non-primitive value
 
@@ -93,11 +148,73 @@
     // console.log("a "+a);
     // console.log("b "+b);
 
-    let str1='123 deepak';//converting string to number
-    console.log(parseInt(str1));
 
-    let num1=123;
-    console.log( typeof(num1.toString()));//converting number to string
-   </script>
+    //Question 8
+    // let str1='123 deepak';//converting string to number
+    // console.log(parseInt(str1));
+
+    // let num1=123;
+    // console.log( typeof(num1.toString()));//converting number to string
+
+    //Question 9
+    //splice method 
+    let dee=[10,20,30,40,50];
+        dee.splice(2,3,80,90,120); // first value means where you want to start and second how much value you want to remove and third what you want to add in this array.  
+        dee.splice(5,0,'deepak')
+        console.log(dee);
+
+
+
+        //question 10
+        function check()
+        {
+            let array=[10,20,30,40,50,60]; 
+            let input1=Number(document.getElementById('input1').value);  
+             
+             
+             let dee2=array.includes(input1);
+            // console.log(dee2);   
+
+            if (dee2==true)
+             {
+                console.log('it is included');
+            }
+            else if (dee2==false)
+             {
+                console.log('It is not included');
+            }
+            else
+            {
+                console.log('how');
+            }
+          
+        }
+
+
+        //question 11
+        
+        let arr3=[10,20,30,40];
+        let arr5 =arr3.slice(0,2)
+        console.log(arr5);
+        console.log(arr3);
+        
+
+        //Questioin 12
+        let srk={
+            name:'shahrukh khan',
+            place:"Mumbai"
+        }
+    
+        srk.gmail='srk121@gmail.com';
+        
+        srk['followers']=1000; //Bracket Notation
+        
+        console.log(srk);
+        
+        //quetion 13
+
+        console.log(srk.hasOwnProperty('gmail'));
+        
+    </script>
 </body>
 </html>
