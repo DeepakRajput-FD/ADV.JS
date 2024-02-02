@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions_part2</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 10px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+   <h4> 6. What are the differences between var, let, and const in JavaScript for declaring variables?</h4>
+    <h5>
+        var variable have global scope and var keyword is used to you can redeclare multiple and reassign value.
+        <br>
+        let keyword have also local scoped and global scoped but if you set local scope that time the local scope value avaliable only local scope and global scope is avaliable for entire scope. and reassign is possible and redeclare is not possible.
+        <br>
+        Const keyword have also local scoped and global scoped but if you set local scope that time the local scope value avaliable only local scope and global scope is avaliable for entire scope. and reassign is not possible and redeclare is not possible.     
+    </h5>
+
+   <h4> 7. Explain the difference between primitive and reference types in JavaScript. Provide examples for each. </h4>
+    <h5>
+        Primitive types are simple data types that hold a single value, such as a number or string.
+        Boolean: a true or false value
+        Null: an empty value
+        Undefined: a value that has not been set
+        Number: a numeric value
+        String: a sequence of characters(orderd list)
+        Symbol : a unique identifier
+        <br>
+        Reference types are complex data types that can hold multiple values, such as an array or object.
+        Objects: A collection of key-value pairs
+        Arrays: An ordered list of values
+    </h5>
+
+   <h4> 8. How would you convert a string to a number and vice versa in JavaScript? </h4>
+   <h5>
+    convert string to Number using parseInt() method 
+    <br>
+     convert Number to String using toString() method.
+   </h5>
+   
+   <h4> 9. What does the splice() method do in JavaScript arrays?  </h4>
+   <h4> 10. How would you check if an element exists in an array in JavaScript without using loops?</h4> 
+   <h4> 11. Explain the difference between slice() and splice() methods in JavaScript arrays. </h4>
+   <h4> 12. How do you add a new property to an existing JavaScript object? </h4>
+   <h4> 13. What's the difference between hasOwnProperty() and in operator in JavaScript object handling?</h4>
+
+
+
+   <script>
+
+    // // primitive values
+    // let string='string';
+    // let number=123;
+    // let Boolean2=true;
+    // let num2=BigInt(345);
+    // let sym=Symbol('Deepak');
+    // let value1=null;
+    // let drek=undefined;
+    // console.log(string + number +Boolean2 +num2 +value1 +drek );
+    // console.log(sym);
+
+    // non-primitive value
+
+    // let arr=[10,20,30,40,50];
+    // let obj1=
+    // {
+    //     name:'deepak',
+    //     surname:'rajput',
+    //     gmail:'ds644169@gmail.com'
+    // }
+
+    // let obj2=obj1;
+    // console.log({...obj2, name:'Deepak Rajput',...obj1=null});
+    
+    // let arr2=arr;
+
+    // arr.push(60); //pass by reference
+    // // console.log(obj1);
+    // console.log(arr2);
+    // console.log(arr);
+
+    // let a=10, b=20;
+    // a=b;//pass by value
+    // b=30;
+    // console.log("a "+a);
+    // console.log("b "+b);
+
+    let str1='123 deepak';//converting string to number
+    console.log(parseInt(str1));
+
+    let num1=123;
+    console.log( typeof(num1.toString()));//converting number to string
+   </script>
+</body>
+</html>

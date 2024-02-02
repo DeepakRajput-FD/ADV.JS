@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<body>
+    <script>
+
+
+            //for of loop
+            //it is basically used for array to iterate the value
+        // let arr=[10,20,30];
+        // for (const iterator of arr)
+        //  {
+        //     console.log('deepak');
+        // }
+
+        //for each loop
+        //it is same as for of loop it is used to print the statement 
+        // let arr1=[10,20,50];
+        // arr1.forEach(element => 
+        // {
+        //     console.log('deepak');
+        // });
+
+        //for in loop
+        //it is different from for each and for of loop.
+        // it is basically used for objects
+
+          let arr ={
+                name:'deepak',
+                email:'ds644169@gmail.com',
+                ph_no:655565656,
+                id:'121'
+
+            }
+
+            for (const key in arr) {
+                if (Object.hasOwnProperty.call(arr, key))
+                 {
+                    // const element = arr[key];
+                    // console.log(`${key}:${arr[key]}`);
+                    console.log(arr[key]);
+                }
+            }
+            
+
+    </script>
+</body>
+</html>

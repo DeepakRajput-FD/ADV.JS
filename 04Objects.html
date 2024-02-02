@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        //freeze method is used to you can manipulate like edit or delete you can't do this.
+        // Object.freeze(deepak);
+
+
+        let deepak=
+        {
+            Age:19,
+            gmail:'ds644169@gmail.com',
+            mob:9265921534,
+            data:
+            {
+                course_name:'Frontend',                
+                course_place:'CG Road'
+            }
+        }
+        console.log(deepak);//it is print
+        console.log(deepak.gmail);//it is pick the value from object
+        deepak.gmail='raj';//it is change the value
+        console.log(deepak.gmail);//    op=raj
+
+
+
+        deepak.run='56'; //it is used to add the key in object(.)  
+        console.log(deepak);
+
+        // delete deepak.run;//delete keyword is used to delete the key.
+        
+        delete deepak['56'];
+        
+
+        console.log(deepak);
+
+        // Object.freeze(deepak);
+        // deepak.rat='check';
+        // console.log(deepak);
+
+
+//optional chaning
+
+console.log(deepak?.data.course_name);
+
+// //practice
+// let object2=
+// [
+//     'deepak',
+//     'Meet',
+//     {Lalit:[
+//         {detials:{
+//             Name:"Lalit",
+//             Mob:"8520",
+//             Addre:{
+//                 state:"gujarat",
+//                 city:{
+//                     Name:"Ahmedabad",
+//                     Area:"CG"
+//                 }
+//             }
+//         }}
+//     ]}
+// ]
+
+// console.log(object2[2].Lalit[0].detials.Addre.city.Area)
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //spread OPerator
+
+        // console.log({...deepak, friend:'lalit',run:''});//spread operator
+
+        // console.log({...deepak=null, });//spread operator
+</script>
+</body>
+</html>
