@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice2</title>
+</head>
+<body>
+    <input type="text" id="input1" onblur="myfun()">
+    <span id="spn1"></span>
+    <script>
+        let r=/\s/ ;
+       function myfun()
+       {
+        let span=document.getElementById('spn1');
+        let input1=document.getElementById('input1').value;
+        if (input1=='')
+         {
+            console.log('it is empty');    
+        }
+        else if (r.test(input1))
+         {
+            console.log('thnks');
+            span.innerHTML='hii'
+        }
+        else
+        {
+            console.log('how');
+        }
+       }
+    </script>
+</body>
+</html>

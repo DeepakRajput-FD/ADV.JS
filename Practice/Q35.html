@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice1</title>
+</head>
+<body>
+    <h4>
+        35 Write a program make a summation of given number (E.g., 1523 Ans: - 11) in JS?  
+    </h4>
+    <input type="text" name="" id="input1" placeholder="Enter value">
+        <button onclick="myfun()">
+            Click
+        </button>
+    <script>
+        function myfun()
+         {
+            
+             let input1=Number(document.getElementById('input1').value);
+             let count=0;
+             let check=0
+            
+             while (input1>0)
+              {
+                  let digit=input1%10; //it is divide the last value
+                   check=check+digit; //and the value is contained on a variable.
+                   input1=Math.floor(input1/10);
+                    // console.log(rev);
+                    
+                    if (input1==0)
+                     {
+                         alert(check);  
+                        
+                    }
+             }
+            //  console.log();
+
+            }
+    </script>
+</body>
+</html>

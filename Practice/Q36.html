@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q36</title>
+</head>
+<body>
+    
+    <input type="text" name="" id="input1" placeholder="Enter Value">
+    <button onclick="myfun()">
+        click
+    </button>
+    <script>
+       function myfun()
+       {
+
+           let input=Number(document.getElementById('input1').value);
+           let rev=0;
+           let arr=[];
+        while (input>0)
+        {
+            let digit=input%10;
+            rev=rev*10+digit;
+            input=parseInt(input/10);
+            // arr.push(rev);
+            console.log(rev);
+        }
+        }
+    </script>
+</body>
+</html>
