@@ -103,8 +103,20 @@
    <h4> 13. What's the difference between hasOwnProperty() and in operator in JavaScript object handling?</h4>
 
    <h5>
-
-   </h5>
+    hasOwnProperty(): Checks only for own properties of an object. It ignores properties inherited from the prototype chain.
+        <br>
+    in operator: Checks for properties both on the object itself and anywhere in the prototype chain.
+        <br>
+        Both return true if the property exists within their respective scopes.
+        <br>
+        Both return false if the property is not found.
+        <br> Syntax =>
+        let obj={name:'deepak'}
+        <br>
+        console.log(obj.hasOwnProperty('name'))//true
+            <br>
+        console.log("data" in obj) //false
+    </h5>
 
    <script>
 
@@ -177,15 +189,15 @@
 
             if (dee2==true)
              {
-                console.log('it is included');
+                alert('it is included');
             }
             else if (dee2==false)
              {
-                console.log('It is not included');
+                alert('It is not included');
             }
             else
             {
-                console.log('how');
+                alert('how');
             }
           
         }
@@ -202,7 +214,11 @@
         //Questioin 12
         let srk={
             name:'shahrukh khan',
-            place:"Mumbai"
+            place:"Mumbai",
+            Family:{
+                wife:'Gauri',
+                son:'aryan'
+            }
         }
     
         srk.gmail='srk121@gmail.com';
@@ -214,6 +230,7 @@
         //quetion 13
 
         console.log(srk.hasOwnProperty('gmail'));
+        console.log('place' in srk);
         
     </script>
 </body>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor</title>
+</head>
+<body>
+    <script>
+        class Deepak 
+        {
+            constructor ()
+            {
+                console.log('hii');
+                // console.log(this.name);
+            }
+
+            dee(name,age) //parametrized constructor
+            {
+                this.name=name;
+                this.age=age;
+                console.log(' This is the Name '+this.name);
+                console.log(this.age +' This is age ');
+                console.log('how are you');    
+            }
+
+            jack()
+            {
+                console.log('This is jack');
+            }
+        }
+
+        
+
+        
+        let d1=new Deepak();
+        d1.dee('Raj',19); //parametrized constructor
+
+        let d2=new Deepak(d1); //copy constructor
+        d2.dee('Rahul',25)
+        d2.jack();
+        // console.log(d1);
+    </script>
+</body>
+</html>
