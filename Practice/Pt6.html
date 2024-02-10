@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pt6</title>
+</head>
+<body>
+    <select name="" id="select1" onchange="myfun()">
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="blue">blue</option>
+        <option value="orange">orange</option>
+        <option value="teal">teal</option>
+        <option value="maroon">maroon</option>
+    </select>
+    <div class="block" style="width: 300px;height: 300px;">
+        
+    </div>
+    <script>
+        function myfun()
+         {
+            let block1=document.getElementsByClassName('block');
+             let select=document.getElementById('select1').value;
+            //  console.log(select);
+             block1[0].style.background=select;
+            }
+    </script>
+</body>
+</html>

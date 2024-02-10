@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        table
+        {
+            border: 2px solid black;
+            margin: 50px ;
+            padding: 50px;
+        }
+        th
+        {
+            border: 2px solid black;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>No.</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        
+        <tr>
+            <th id="t1"></th>
+            <th id="t2"></th>
+            <th id="t3"></th>
+        </tr>
+         <tr>
+            <th id="t4"> </th>
+            <th id="t5"> </th>
+            <th id="t6"> </th>
+        </tr>
+       
+      
+    </table>
+
+    <input type="text" name="" id="input1" onblur="myfun()">
+
+    <script>
+        let array=[{
+        num:1,name:'deepak',age:19,
+        num2:2,name2:'sunny',age2:19,
+        num3:1,name3:'rahul',age3:19,
+        num4:1,name4:'hitesh',age:19,
+        num5:1,name5:'mina',age:19,
+        num6:1,name6:'karan',age:19
+    }]
+        let t1=document.getElementById('t1');
+        let t2=document.getElementById('t2');
+        let t3=document.getElementById('t3');
+        let t4=document.getElementById('t4');
+        let t5=document.getElementById('t5');
+        let t6=document.getElementById('t6');
+
+        let th7=document.getElementById('th7');
+
+        array.map((t,d)=>
+        {
+             t1.innerHTML=t.num;
+             t2.innerHTML=t.name; //name1
+             t3.innerHTML=t.age; 
+
+             t4.innerHTML=t.num2; 
+             t5.innerHTML=t.name2;//name2
+             t6.innerHTML=t.age2;
+
+             
+            })
+            function myfun()
+             {
+                 let dee=document.getElementById('input1');
+                 
+                 if (array[0].name==dee.value)
+                 {
+                     console.log('hii');
+                    t2.style.color='red';
+                    }
+                }
+    </script>
+</body>
+</html>
