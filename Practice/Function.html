@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+        function one()
+         {
+            let username='Deepak';
+            console.log(username);    
+            
+            function two()
+             {
+                let age=19;
+                console.log(age);   
+            }
+            two();
+        }
+        one(); //if it is commented then it is function two() is not called.
+
+        if (true)
+         {
+            console.log('hii');    
+        }
+
+        
+        let deepak =(name,age,course)=> {
+            console.log('Hello Deepak');
+            console.log(name+age+course);
+        }
+        deepak('dragon ',19,' frontend');
+
+    </script>
+</body>
+</html>

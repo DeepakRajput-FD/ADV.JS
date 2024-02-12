@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo List</title>
+    <style>
+        #parent
+        {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 0px;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="" id="input1">
+    <button onclick="dee()">
+        Create
+    </button>
+    <div id="parent">
+
+        <div id="div2">
+
+        </div>
+       
+        <div id="div3">
+        </div>
+        <div id="div4">
+        </div>
+    </div>
+    <script>
+      function  dee()
+        {
+            let input=document.getElementById('input1').value;
+            let text=document.createElement('label');
+            let button=document.createTextNode(input);
+            text.appendChild(button);
+           let name= document.getElementById('div2').appendChild(text); //input show
+
+            let create=document.createElement('button'); //create a element edit button
+            let text1=document.createTextNode('Edit'); //create a text
+            create.appendChild(text1)
+            
+          let edit= document.getElementById('div3').appendChild(create);
+
+            let dele=document.createElement('button');
+            let deletext=document.createTextNode('Delete');
+            dele.appendChild(deletext);
+
+           let delet= document.getElementById('div4').appendChild(dele)
+
+            delet.addEventListener('click',function ()
+             {
+                delet.remove();
+                edit.remove();
+                name.remove();
+            });
+
+            edit.addEventListener('click',function ()
+             {
+                text=document.createElement('input');
+                
+            });
+
+        }
+    </script>
+</body>
+</html>

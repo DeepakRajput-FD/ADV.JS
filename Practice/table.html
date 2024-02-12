@@ -25,7 +25,7 @@
     </style>
 </head>
 <body>
-    <table>
+    <!-- <table>
         <tr>
             <th>No.</th>
             <th>Name</th>
@@ -44,7 +44,7 @@
         </tr>
        
       
-    </table>
+    </table> -->
 
     <input type="text" name="" id="input1" onblur="myfun()">
 
@@ -64,17 +64,38 @@
         let t5=document.getElementById('t5');
         let t6=document.getElementById('t6');
 
-        let th7=document.getElementById('th7');
+        let th7=document.g
+        etElementById('th7');
 
         array.map((t,d)=>
         {
-             t1.innerHTML=t.num;
-             t2.innerHTML=t.name; //name1
-             t3.innerHTML=t.age; 
+            //  t1.innerHTML=t.num;
+            //  t2.innerHTML=t.name; //name1
+            //  t3.innerHTML=t.age; 
 
-             t4.innerHTML=t.num2; 
-             t5.innerHTML=t.name2;//name2
-             t6.innerHTML=t.age2;
+            //  t4.innerHTML=t.num2; 
+            //  t5.innerHTML=t.name2;//name2
+            //  t6.innerHTML=t.age2;
+            <table>
+        <tr>
+            <th>No.</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        
+        <tr>
+            <th id="t1"></th>
+            <th id="t2"></th>
+            <th id="t3"></th>
+        </tr>
+         <tr>
+            <th id="t4"> </th>
+            <th id="t5"> </th>
+            <th id="t6"> </th>
+        </tr>
+       
+      
+    </table>
 
              
             })
