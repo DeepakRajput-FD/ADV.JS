@@ -10,6 +10,8 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-size: 20px;
+        font-family: sans-serif;
         }
         #parent
         {
@@ -18,16 +20,29 @@
             padding: 20px 0px;
             flex-wrap: wrap;
             align-items: center;
+            background-color: tan;
+            
         }
         input,button
         {
-            color: blue;
             padding: 5px;
+        }
+        button
+        {
+            border: 0;
+            padding: 5px 10px;
         }
         .wrap1
         {
             text-align: center;
             padding: 20px 0px;
+        }
+
+        #btn1
+        {
+            background: green;
+            color: white;
+
         }
 
     </style>
@@ -64,23 +79,32 @@
             }
             else
             {
-                let text=document.createElement('label');
-                let button=document.createTextNode(input);
-                text.appendChild(button);
-               let name= document.getElementById('div2').appendChild(text); //input show
+
+                //1st element
+
+                let text=document.createElement('label');  //label element
+                let button=document.createTextNode(input); //text
+                text.appendChild(button); 
+               let name= document.getElementById('div2').appendChild(text); // 1st input show on html 
     
+                //2nd element
+               
                 let create=document.createElement('button'); //create a element edit button
                 let text1=document.createTextNode('Edit'); //create a text
                 create.appendChild(text1)
-                
               let edit= document.getElementById('div3').appendChild(create);
-    
+                edit.style.background='yellow';//styling
+                
+                //3rd element
+
                 let dele=document.createElement('button');
                 let deletext=document.createTextNode('Delete');
                 dele.appendChild(deletext);
-    
-               let delet= document.getElementById('div4').appendChild(dele);
+               let delet= document.getElementById('div4').appendChild(dele); // Delete
 
+               delet.style.background='red';//styling
+
+               //delete button
                delet.addEventListener('click',function ()
                 {
                    delet.remove();
@@ -88,6 +112,8 @@
                    name.remove();
                });
    
+
+               //edit button
                edit.addEventListener('click',function ()
                 {
                     button.remove();
@@ -95,6 +121,10 @@
                   let text2=document.createTextNode(input);
                    text.appendChild(text2)
                    name.appendChild(text)
+
+                //    text.style.background='transparent';
+                   text.style.border='0';
+
                });
             }
 
