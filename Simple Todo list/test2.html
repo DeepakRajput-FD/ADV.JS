@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test2</title>
+</head>
+<body>
+    <input type="text" name="" class="input1">
+    <button onclick="myfun()">click</button>
+    <script>
+       function myfun()
+       {
+        let input1=document.querySelectorAll('.input1');
+
+        input1.forEach(element => {
+            console.log(element.value);
+        });
+    }
+    </script>
+</body>
+</html>

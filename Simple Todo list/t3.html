@@ -15,13 +15,11 @@
         }
         #parent
         {
-            display: flex;
-            justify-content: space-around;
+            width: fit-content;
             padding: 20px 0px;
-            flex-wrap: wrap;
             align-items: center;
             background-color: tan;
-            
+            display: flex;
         }
         input,button
         {
@@ -42,7 +40,6 @@
         {
             background: green;
             color: white;
-
         }
 
     </style>
@@ -57,14 +54,14 @@
     </div>
     <div id="parent">
 
-        <div id="div2">
+        <!-- <div id="div2">
 
         </div>
        
         <div id="div3">
         </div>
         <div id="div4">
-        </div>
+        </div> -->
     </div>
     <script>
        let btn=document.getElementById('btn1');
@@ -85,14 +82,14 @@
                 let text=document.createElement('label');  //label element
                 let button=document.createTextNode(input); //text
                 text.appendChild(button); 
-               let name= document.getElementById('div2').appendChild(text); // 1st input show on html 
+               let name= document.getElementById('parent').appendChild(text); // 1st input show on html 
     
                 //2nd element
                
                 let create=document.createElement('button'); //create a element edit button
                 let text1=document.createTextNode('Edit'); //create a text
                 create.appendChild(text1)
-              let edit= document.getElementById('div3').appendChild(create);
+              let edit= document.getElementById('parent').appendChild(create);
                 edit.style.background='yellow';//styling
                 
                 //3rd element
@@ -100,7 +97,7 @@
                 let dele=document.createElement('button');
                 let deletext=document.createTextNode('Delete');
                 dele.appendChild(deletext);
-               let delet= document.getElementById('div4').appendChild(dele); // Delete
+               let delet= document.getElementById('parent').appendChild(dele); // Delete
 
                delet.style.background='red';//styling
 
@@ -126,6 +123,9 @@
                    text.style.border='0';
 
                });
+
+               
+            
             }
 
     });

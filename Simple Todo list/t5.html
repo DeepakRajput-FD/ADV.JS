@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo5</title>
+    <style>
+        #show
+        {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="" id="input1">
+    <button id="btn1">click</button>
+    <div id="show">
+
+    </div>
+    <script>
+       let btn1= document.getElementById('btn1');
+       let show= document.getElementById('show');
+       btn1.addEventListener('click',function ()
+        {
+            let input1=document.getElementById('input1').value;
+             console.log(input1);
+
+             let element1=document.createElement('p');
+             let textNode1=document.createTextNode(input1);
+             element1.appendChild(textNode1);
+             
+             let element2=document.createElement('button');
+            let textNode2=document.createTextNode('Edit');
+            element2.appendChild(textNode2);
+            
+
+            let element3=document.createElement('button');
+            let textNode3=document.createTextNode('Delete');
+            element3.appendChild(textNode3);
+
+            element1.appendChild(element2);
+            element1.appendChild(element3);
+            
+            
+            show.appendChild(element1);
+
+            element3.addEventListener('click',function ()
+             {
+                element1.remove();
+                element2.remove();
+                element3.remove();
+            })
+
+        });
+    </script>
+</body>
+</html>
