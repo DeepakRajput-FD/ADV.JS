@@ -6,40 +6,40 @@
     <title>Template Literal</title>
 </head>
 <body>
-    <input type="text" name="" id="input1">
-    <button id="btn1">click</button>
-    <div id="show">
-
+    <div>
+        <input type="text" name="" class="input1">
+        <button id="btn1">click</button>
     </div>
+    <ul id="ul">
+
+    </ul>
+
 
     <script>
-        let input1=document.getElementById('input1');
-        let show=document.getElementById('show');
-        let btn1=document.getElementById('btn1');
 
-        btn1.addEventListener('click',function ()
+        let todo = [
+            {id:1,name:"Lalit"},
+            {id:2,name:"Deepak"},
+            {id:3,name:"Utsav"}
+        ]
+         
+        var ulTag = document.getElementById('ul')
+        todo.forEach((v,i)=>{
+            // listTag.innerHTML = listTag.innerHTML+v.name;
+            var List   =  `<li id="list">${v.name} <button>Edit</button> <button id='btn1' onclick='myfun()'>Delete</button></li>`
+            ulTag.innerHTML = ulTag.innerHTML+List;
+
+            // console.log(v.id);
+        })
+
+        function myfun(d)
          {
-            let element1=document.createElement('div');
-            let text=`<input type="checkbox"><input type="text" value="${input1.value}" >  <button>Edit</button> <button id='dele1' >Delete</button>`;
-            // let textnode=document.createTextNode(text);
-            element1.innerHTML=text;
-            show.appendChild(element1);
+            console.log(d);
+            // console.log(e);
+            // console.log(e);
+        }
 
-            
-
-            dele1.addEventListener('click',function ()
-             {
-                console.log('how');   
-                
-                element1.forEach(element => {
-                    element.remove();
-                });
-                
-            });
-            
-
-
-        });
+        
     </script>
 </body>
 </html>
