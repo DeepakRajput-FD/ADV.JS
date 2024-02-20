@@ -1,0 +1,58 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <input type="text" name="" id="input1">
+    <button onclick="myfun()">click</button>
+    <ul id="change">
+
+    </ul>
+    <script>
+        function myfun()
+         {
+            let list1=document.getElementById('change');
+            let input1=document.getElementById('input1').value;
+            let element1=document.createElement('li');
+            // element1.style.display='flex';
+            let data=`${input1} <button id='btn1'>Edit</button> <button>Delete</button>`;
+            element1.innerHTML=element1.innerHTML+data;
+            list1.appendChild(element1);
+
+            let btn1=document.getElementById('btn1');
+            btn1.addEventListener('click',function ()
+             {
+                console.log('hii');
+
+            });
+        }
+    </script>
+</body>
+</html> -->
+
+
+<!-- canvas -->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<body>
+    <canvas id="canvas1"></canvas>
+    <script>
+       let canvas=document.getElementById('canvas1');
+        let ctx=canvas.getContext('2d');
+        ctx.fillStyle = "green";
+        // Add a rectangle at (10, 10) with size 100x100 pixels
+        ctx.fillRect(50, 50, 1000, 1000);
+    </script>
+</body>
+</html> -->

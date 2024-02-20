@@ -26,18 +26,13 @@
         var ulTag = document.getElementById('ul')
         todo.forEach((v,i)=>{
             // listTag.innerHTML = listTag.innerHTML+v.name;
-            var List   =  `<li id="list">${v.name} <button>Edit</button> <button id='btn1' onclick='myfun()'>Delete</button></li>`
+            var List   =  `<li id="list">${v.name} <button>Edit</button> <button id='btn1'>Delete</button></li>`
             ulTag.innerHTML = ulTag.innerHTML+List;
 
             // console.log(v.id);
         })
 
-        function myfun(d)
-         {
-            console.log(d);
-            // console.log(e);
-            // console.log(e);
-        }
+     
 
         
     </script>

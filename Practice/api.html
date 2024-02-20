@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<ul id="list1">
+    
+</ul>
+<body>
+    <script>
+        fetch("https://jsonplaceholder.typicode.com/users")
+        .then((Response)=>{
+            return Response.json();
+        })
+        .then((data)=>{
+            // console.log(data);
+
+            data.forEach(element => {
+                // let name= element.name;
+                console.log(element);
+                let tr1=document.getElementById('list1');
+                let element2=document.createElement('li');
+                element2.innerText=element2.innerText+element.name;
+                tr1.appendChild(element2)
+                // console.log(element);
+            });
+
+
+        })
+
+        
+
+    </script>
+</body>
+</html>
