@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This key</title>
+</head>
+<body>
+    <script>
+        //it does not easily show we want reference of other variable
+        function dee(name) 
+        {
+            this.name=name;
+            console.log(this.name);
+        }
+        dee('jack');
+
+
+        //it does not easily show we want reference of other variable
+        let dow=(name)=>
+        {
+            this.name=name;
+
+            console.log(this.name);
+        }
+        dow("Denial");
+
+        
+            //it is easily show the value in object
+        let obj1={
+            name:'deepak',
+            place:function ()
+             {
+                console.log(this.name);
+            }
+        }
+        obj1.place();
+
+    </script>
+</body>
+</html>
