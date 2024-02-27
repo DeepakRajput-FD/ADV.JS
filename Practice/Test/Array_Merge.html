@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Merge</title>
+</head>
+<body>
+    <script>
+
+        //we can merge the array using ...(spread Operator)
+
+        let arr1=[10,20,30,40,50]
+        let arr2=[60,70,80,90,100];
+        let arr3=[...arr1,...arr2]; 
+        console.log(arr3);
+
+        let assign=Object.assign(arr1,arr2); //it is not work it is display only new value.
+        console.log(assign);
+    </script>
+</body>
+</html>

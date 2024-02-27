@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object merge</title>
+</head>
+<body>
+    <script>
+        // // array merge
+        // let arr1=[10,20,30];
+        // let arr2=[40,50,60];
+        // // let arr3=Object.assign({},arr1,arr2);
+        // // console.log(arr3);
+        // let merge= arr1.concat(arr2);
+        // console.log(merge);
+
+        //object merge
+
+        let obj1={name:'deepak',uid:123};
+        let obj2={uname:'rata'};
+        let obj3={dname:'rahul'};
+        
+        // let join=Object.assign({},obj1,obj2,obj3)
+        // console.log(join);
+
+        let merge={
+            ...obj1,...obj2,...obj3
+        }
+
+        //if the same key then that time show the new key value.
+
+        console.log(merge);
+
+        let change=Object.assign({},obj1,obj2,obj3);
+        console.log(change);
+</script>
+</body>
+</html>

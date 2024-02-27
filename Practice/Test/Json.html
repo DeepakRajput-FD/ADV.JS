@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object value</title>
+</head>
+<body>
+    <script>
+    let obj1={name:'Deepak',surname:'Rajput',age:19,gender:'men'}
+        let arr1=[10,20]
+   
+        for (const key in obj1) {
+            if (Object.hasOwnProperty.call(obj1, key)) {
+                const element = obj1[key];
+                console.log(element);
+            }
+        }
+
+    </script>
+</body>
+</html>
