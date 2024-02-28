@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Back Hell</title>
+</head>
+<body>
+    <p>
+        basically it is used for to perform multi tasking with current tasking. or perform asynchronous tasking.
+        <br>
+        it is create a pyramid shape 
+        <br>
+        it is create nested function
+    </p>
+    <script>
+    function one()
+     {
+        function two()
+         {
+            function three()
+             {
+            function four()
+             {
+                console.log('hii');    
+            }    
+            }    
+        } 
+        // console.log('hoow');   
+    }
+    one();
+    </script>
+</body>
+</html>
