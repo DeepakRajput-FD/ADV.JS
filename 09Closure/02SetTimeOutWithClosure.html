@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Time With closure</title>
+</head>
+<body>
+    <script>
+
+//in this program it is work on event loop 
+// if the stack is empty the first data is print and after 2 second is print set time out value.
+
+        function name()
+         {
+            for (let i = 0; i <10; i++) 
+            {
+                //it is print 10 times already 
+
+                console.log('hii');
+                setTimeout(() => {
+                    //and after it is print 10 times
+                    console.log(i);
+                }, 2000*i);                
+            }}
+
+            //in block it is work two times in every value.
+            name();
+
+
+        //var keyword
+
+        //     function name2()
+        //  {
+        //     for (var i = 0; i <10; i++) 
+        //     {
+        //         //it is first time print this and after is going to set time out
+        //         console.log('hii');
+        //         setTimeout(() => {
+
+        //             console.log(i);
+        //         }, 2000*i);        
+        //         //and after is print same value 10 time per 2 second after.        
+        //     }}
+
+        //     //in block it is work two times in every value.
+        //     name2();
+
+    </script>
+</body>
+</html>
