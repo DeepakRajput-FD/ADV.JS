@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <style>
+        #card_wrapper
+        {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        video
+        {
+            width: 315px;
+        }
+        video:hover
+        {
+            transform: scale(1.1);
+        }
+       
+     
+       
+    </style>
+</head>
+<body>
+    <div id="card_wrapper">
+    </div>
+    <script>
+        let card_wrapper=document.getElementById('card_wrapper');
+        
+        let arr1img=['img1.webp','img2.webp','img3.webp','img4.webp','img5.webp','img6.webp','img7.webp','img8.webp','img9.webp','img10.webp'];
+        let arrp=['The Indian Cargo','mast&herbour','roadster','here&now','roadster','powerlook','wrogen','locomotive','powerlook','mast&herbour']
+        let arrp2=['Men Slim Fit Casual Shirt','Men Regular Fit Sustainable Casual Shirt','Men Cotton Casual Shirt','Printed Slim Fit Casual Shirt','Men Cotton Casual Shirt','Men Slim Fit Casual Shirt','Men Regular Fit Sustainable Casual Shirt','Men Cotton Casual Shirt','Printed Slim Fit Casual Shirt','Men Cotton Casual Shirt',];
+       let arrp3=[
+        649,749,1469,899,699,499,1899,669,2400,9999
+       ];
+       let videoarr=['Keejo Kesari Ke Laal _ Jai Shree Ram _ DJ Remix _ Ram Mandir Viral Song 2024.mp4','SHOORVEER 3 - A Tribute to छत्रपति शिवाजी महाराज _ Rapperiya Baalam Ft. Shambho I Meetu Solanki.mp4']
+        
+        let count=0;
+
+        function add()
+         {
+            
+        
+
+        arr1img.forEach(element=> {
+            
+            let cards=document.createElement('div');
+            let card1=`<div>
+    <video src="${videoarr[count]}" autoplay controls loop></video>
+         <p>${arrp[count]}</p>
+         <p>${arrp2[count]}</p>
+         <p>Rs.${arrp3[count]}</p>
+         </div>`;
+         count++;
+        //  card1.className='main';
+        cards.innerHTML=card1;
+        card_wrapper.appendChild(cards);
+
+    });
+        }
+
+        add();
+
+    document.addEventListener('scroll',function ()
+     {
+        let scroll=window.scrollY;
+        console.log(scroll);    
+        if (scroll>150)
+         {
+            for (let i = 0; i <=10; i++)
+             {
+                
+                 add();
+            }
+        }
+    })
+ 
+      
+        
+    </script>
+</body>
+</html>
