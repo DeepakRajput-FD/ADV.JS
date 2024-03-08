@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkname2</title>
+    <style>
+        #p1
+        {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="p1">
+
+    </div>
+    <script >
+        function fun2()
+         {  
+            
+             let p1=document.getElementById('p1');
+             let data1= localStorage['value1'];
+             let data2= localStorage['value2'];
+             
+             let div1=document.createElement('div');
+             
+             let element1=`<img src="${data2}" alt="">
+             <p>${data1}</p>
+             <button id='btn2'>Move to Bag</button>`
+             
+             div1.innerHTML=element1;
+
+            p1.appendChild(div1);
+
+            let btn2=document.getElementById('btn2');
+
+            btn2.addEventListener('click',function ()
+             {
+                console.log('hii'); 
+                div1.remove();   
+            })
+            }
+            for (let i = 0; i < 5; i++)
+             {
+                fun2();
+                
+            }
+</script>
+</body>
+</html>

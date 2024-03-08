@@ -19,19 +19,6 @@
     </div>
     <script>
         let card_wrapper=document.getElementById('card_wrapper');
-        
-        // let object1={
-        //     img:{
-        //         img1:'img1.webp'
-        //     },
-        //     name1:'The Indian Cargo',
-        //     cat1:'Men Slim Fit Casual Shirt',
-        //     price1:'Rs.643',
-
-        //     name2:'The Indian Cargo',
-        //     cat2:'Men Slim Fit Casual Shirt',
-        //     price2:'Rs.643'
-        // }
 
         let arr1img=['img1.webp','img2.webp','img3.webp','img4.webp','img5.webp','img6.webp','img7.webp','img8.webp','img9.webp','img10.webp'];
         let arrp=['The Indian Cargo','mast&herbour','roadster','here&now','roadster','powerlook','wrogen','locomotive','powerlook','mast&herbour']
@@ -45,6 +32,7 @@
         arr1img.forEach(element=> {
             
             let cards=document.createElement('div');
+
             let card1=`<div>
          <img src="${element}" alt="">
          <p>${arrp[count]}</p>
@@ -58,12 +46,6 @@
 
     });
  
-        // for (let index = 0; index < 10; index++) 
-        // {
-        //     // const element = array[index];
-        //     // add();
-        // }
-
        
         
     </script>

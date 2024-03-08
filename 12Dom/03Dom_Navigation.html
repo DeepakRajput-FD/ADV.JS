@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Navigation</title>
+  </head>
+  <body>
+    <h1>Dom Navigation</h1>
+
+    <div class="list">
+      <h2 class="title">Items</h2>
+      <ul class="items">
+        <li class="item">Item 1</li>
+        <li class="item">Item 2</li>
+        <li class="item">Item 3</li>
+      </ul>
+      <p>Hello world</p>
+    </div>
+
+    <script>
+      // 1. Parent
+
+    //   const ul = document.querySelector(".items");
+
+    //   // parentNode
+    //   console.log(ul.parentNode);
+    //   ul.parentNode.style.color = "red";
+
+      //   2. Child node
+
+    //   firstElementChild;
+    //   lastElementChild;
+
+    //   const ul = document.querySelector(".items");
+
+    //   // childNode
+    //   console.log(ul.children[0]);
+
+    //   const ul = document.querySelector(".items");
+
+    //   // childNode
+    //   console.log(ul.firstElementChild);
+    //   console.log(ul.lastElementChild);
+
+    //   // 3. Sibling node
+
+    //   //   nextElementSibling;
+    //   //   previousElementSibling;
+
+      const ul = document.querySelector(".items");
+
+      // siblingNode
+      console.log(ul.previousElementSibling);
+      console.log(ul.nextElementSibling);
+
+
+    </script>
+  </body>
+</html>

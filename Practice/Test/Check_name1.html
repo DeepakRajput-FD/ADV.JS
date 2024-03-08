@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check_Name</title>
+</head>
+<body>
+    <input type="text" name="" id="input1">
+    <button id="btn1" onclick="fun2()">
+        check
+    </button>
+     <script>
+       function fun2()
+       {
+           let  input1=document.getElementById('input1').value;
+            console.log(input1);
+            let value1=input1;
+
+            let imgarr='img10.webp'
+
+            localStorage.setItem('value1',value1);
+            localStorage.setItem('value2',imgarr);
+        
+        }
+
+    </script>
+</body>
+</html>

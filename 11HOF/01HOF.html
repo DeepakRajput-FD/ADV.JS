@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOF- Heigher Order Function</title>
+  </head>
+  <body>
+    <h1>HOF- Heigher Order Function</h1>
+
+    <script>
+      // HOF- Heigher Order Function
+
+      // function a() {
+      //     console.log('hello');
+      // }
+
+      // function b(a) {
+      //     a()
+      // }
+      // b(a)
+
+      function ask(question, yes, no) {
+        // if (confirm(question)) {
+        //     yes()
+        // } else {
+        //     no()
+        // }
+        console.log(question);
+        console.log(yes);
+        console.log(no);
+      }
+
+      function yes() {
+        console.log("yes");
+      }
+      function no() {
+        console.log("no");
+      }
+
+      ask("Are you Student", yes, no);
+      //ask is a higher order function and yes and no are callback function 
+
+
+    // Diameter , area, circumference of circle 
+    // arr = [2,4,6,8]
+    </script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises in JS</title>
+  </head>
+  <body>
+    <h1>Promises in JS</h1>
+    <p>
+      The Promise object represents the eventual completion (or failure) of an
+      asynchronous operation and its resulting value
+    </p>
+
+    <li><em> pending: </em>initial state, neither fulfilled nor rejected.</li>
+    <li>
+      <em> fulfilled:</em> meaning that the operation was completed
+      successfully.
+    </li>
+    <li><em> rejected:</em> meaning that the operation failed.</li>
+
+    <script>
+     let Promise1=new Promise((resolve,reject)=>
+     {
+        
+        if (0*10==0)
+         {
+            resolve('answer is right')    
+        }
+        else
+        {
+            reject('answer is wrong')
+        }
+     });
+
+     Promise1.then(
+        (deepak)=>console.log(deepak),
+        (error)=>console.log('some error')
+     )
+
+     console.log(Promise1);
+
+    //  try
+    //  {
+    //     if (0*10==0)
+    //      {
+    //         resolve('answer is right')    
+    //     }
+    //  }
+    //  catch
+    //  {
+    //     console.log('good');
+    //  }
+     
+    </script>
+  </body>
+</html>
