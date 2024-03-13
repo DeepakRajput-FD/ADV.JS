@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example4</title>
+    <style>
+        .thumbnail img
+        {
+            width: 100px;
+            height: 100px;
+        }
+        .maincontainer img
+        {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="thumbnail">
+        <img src="./images/jacket1.webp" alt="">
+        <img src="./images/jacket2.webp" alt="">
+        <img src="./images/jacket3.webp" alt="">
+        <img src="./images/jacket4.webp" alt="">
+        <img src="./images/jacket5.jpg" alt="">
+    </div>
+
+    <div class="maincontainer">
+        <img src="./images/jacket5.jpg" alt="">
+    </div>
+    
+    <script>
+        let allimages=document.querySelectorAll('.thumbnail img')
+        allimages.forEach(function (thumbnail)
+         {
+            console.log(thumbnail);
+
+            thumbnail.addEventListener('click',function ()
+             {
+                var imgpath=this.getAttribute('src');
+                console.log(imgpath);
+
+                var mainprev=document.querySelector('.maincontainer img')
+                mainprev.setAttribute('src',imgpath)
+            })
+
+        })
+    </script>
+</body>
+</html>

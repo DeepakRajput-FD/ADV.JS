@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+    <style>
+        .color_container
+        {
+            color: red;
+            background-color: blanchedalmond;
+            font-size: 30px;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        button
+        {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>Hello this is h2 1</h2>
+    <h2>Hello this is h2 2</h2>
+    <h2>Hello this is h2 3</h2>
+
+    <button id="button1">
+        Click
+    </button>
+
+    <script>
+        let allh2=document.querySelectorAll('h2');
+        let button1=document.getElementById('button1');
+        button1.addEventListener('click',function ()
+         {
+            allh2.forEach(function (element)
+             {
+                element.classList.add('color_container')
+            })    
+        })
+    </script>
+
+</body>
+</html>
