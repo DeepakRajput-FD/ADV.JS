@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 10</title>
+</head>
+<body>
+    
+    <div id="mydiv"></div>
+
+    <script>
+        let div=document.getElementById('mydiv');
+
+        let input=document.createElement('input');
+        input.type='text';
+        input.placeholder='enter value';
+        input.id='myinputid';
+        input.name='myinputname';
+
+        div.append(input);
+
+        let button1=document.createElement('button');
+        button1.textContent='Add';
+        button1.id='mybuttonid';
+
+        div.append(button1);
+        
+
+        let ul=document.createElement('ul');
+
+        document.getElementById('mybuttonid').addEventListener('click',function ()
+         {
+          let li=document.createElement('li');
+          let value1=document.getElementById('myinputid').value;
+          li.textContent=value1;
+          ul.append(li);
+          div.append(ul)
+            document.getElementById('myinputid').value='';
+                
+        })
+
+    </script>
+
+</body>
+</html>

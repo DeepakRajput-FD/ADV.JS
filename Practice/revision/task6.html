@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color palete</title>
+</head>
+<body>
+    <div id="show">
+
+    </div>
+    <script>
+
+        let show=document.getElementById('show');
+
+        let input=document.createElement('input');
+        input.textContent='Enter Color Value';
+        input.id='inputid1'
+        show.append(input)
+        let button1=document.createElement('button');
+        button1.textContent='ADD';
+        button1.id='buttonid1'
+        show.append(button1)
+        document.getElementById('buttonid1').addEventListener('click',function ()
+         {
+            let inputid1=document.getElementById('inputid1').value;
+            console.log(inputid1);
+            let button2=document.createElement('button');
+            button2.className='button2id';
+            button2.textContent=inputid1;
+            button2.style.background=inputid1;
+            show.appendChild(button2);
+
+           let a= document.querySelectorAll('.button2id');
+            // console.log(a.value);
+            a.forEach(function (element)
+             {
+                element.addEventListener('click',function ()
+                 {
+                    // console.log(this.innerText);
+                    document.body.style.background=this.innerText;      
+                })
+
+            })
+
+        })
+    </script>
+</body>
+</html>

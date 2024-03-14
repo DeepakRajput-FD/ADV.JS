@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element</title>
+</head>
+<body>
+    <script>
+        let div=document.createElement('div');
+        let h1=document.createElement('h1');
+        let button=document.createElement('button');
+        h1.textContent='this is h1';
+        button.id='mybutton1';
+        div.appendChild(h1)
+        button.textContent='click to button';
+        document.body.appendChild(div);
+        div.appendChild(button)
+        document.getElementById('mybutton1').addEventListener('click',function () {
+            h1.style.color='red';
+        })
+    </script>
+</body>
+</html>

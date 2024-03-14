@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordions or collpase</title>
+    <style>
+        .subcontainer .que
+        {
+            height: 20px;
+            border: 2px solid black;
+        }
+        .subcontainer .ans
+        {
+            height: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="maincontainer">
+        <div class="subcontainer">
+            <div class="que">
+                What is Html?
+            </div>
+            <div class="ans">
+                hypertext markup language
+            </div>
+            <div class="que">
+                What is css?
+            </div>
+            <div class="ans">
+              Cascading style sheet
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let questionall=document.querySelectorAll('.subcontainer .que');
+        console.log(questionall);
+
+            questionall.forEach(function(element)
+            {
+                console.log(element);
+               
+                element.addEventListener('click',function ()
+                 {
+                     let ans=this.nextElementSibling;
+                     console.log(ans);
+                     if (ans.style.display=='none')
+                      {
+                        ans.style.display='block'
+                     }
+                     else
+                     {
+                        ans.style.display='none'
+                     }
+                    })
+            });
+
+    </script>
+</body>
+</html>
