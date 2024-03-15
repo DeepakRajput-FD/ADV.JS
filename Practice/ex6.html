@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="buttonclass">red</button>
+    <button class="buttonclass">green</button>
+    <button class="buttonclass">blue</button>
+    <button class="buttonclass">teal</button>
+    <button class="buttonclass">yellow</button>
+
+    <script>
+        let button1=document.querySelectorAll('.buttonclass');
+        button1.forEach(function (element)
+         {
+            console.log(element);    
+            element.addEventListener('click',function ()
+             {
+                console.log(this.innerText); 
+                document.body.style.background=this.innerText;   
+            })
+        })
+    </script>
+
+</body>
+</html>
