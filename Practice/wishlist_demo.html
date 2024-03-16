@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check Button</title>
+</head>
+<body>
+    <div id="show">
+
+    </div>
+    <script>
+
+        let show=document.getElementById('show');
+
+        console.log(show);
+
+        let button1=document.createElement('button');
+        button1.id='mybuttonid';
+        button1.textContent='click to add';
+        show.append(button1)
+        
+        document.getElementById('mybuttonid').addEventListener('click',function ()
+         {
+               let button2=document.createElement('button');
+               button2.textContent='my button2';
+               button2.className='mybutton2class';
+            //    console.log(button2);
+               show.appendChild(button2)
+
+              let d= document.querySelectorAll('.mybutton2class'); 
+            
+              
+              d.forEach(function (element)
+               {
+                // console.log('hii');
+                element.addEventListener('click',function ()
+                 {
+                    console.log(this.innerText);
+                })
+            })
+            
+        })
+       
+
+    </script>
+</body>
+</html>

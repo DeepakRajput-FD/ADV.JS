@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD OPeration</title>
+    <style>
+        table
+        {
+            border-collapse: collapse;
+        }
+        tr,th
+        {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="Enter Name" id="username">
+    <input type="text" placeholder="Enter Age" id="age">
+    <button id="submit">Submit</button>
+    <div id="show1">
+
+    </div>
+    <script>
+
+        //showing
+        let show1=document.getElementById('show1');
+
+
+        let submit=document.getElementById('submit');
+        // console.log(submit);
+        let input1=document.getElementById('username');
+        let input2=document.getElementById('age');
+        submit.addEventListener('click',function ()
+         {
+            console.log(input1.value);    
+            console.log(input2.value);
+            
+            let  table=document.createElement('table');
+            table.className='tabclass'
+            let tr=document.createElement('tr');
+            
+            let th1=document.createElement('th');
+            th1.textContent=input1.value;
+            let th2=document.createElement('th');
+            th2.textContent=input2.value;
+            
+            let th3=document.createElement('th');
+            let update=document.createElement('button');
+            update.id='updateId';
+            update.textContent='Update'
+            let th4=document.createElement('th');
+            let del=document.createElement('button');
+            del.textContent='Remove'
+            del.classList='del1'
+            
+            th3.append(update);
+            th4.append(del);
+
+            tr.append(th1,th2,th3,th4);
+            table.append(tr);
+            show1.append(table);
+
+           let trclass= document.querySelectorAll('.tabclass tr');
+            
+           // console.log(trclass);
+
+           let removeButton=document.querySelectorAll('.del1');
+            
+            trclass.forEach(function (element)
+             {
+                // console.log(element); 
+
+                removeButton.forEach(function (element2)
+                 {
+
+                element2.addEventListener('click',function ()
+                 {
+
+                    element.addEventListener('click',function ()
+                     {
+                        element.remove();  
+                    })
+                    
+                })
+            })
+
+
+            })
+
+        })
+    </script>
+</body>
+</html>

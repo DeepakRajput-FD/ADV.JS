@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element width</title>
+    <style>
+        div
+        {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, vitae? 1</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, vitae? 2</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, vitae? 3</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, vitae? 4</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, vitae? 5</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, vitae? 6</div>
+
+    <script>
+        let alldiv=document.querySelectorAll('div');
+        // console.log(alldiv);
+        alldiv.forEach(function (element,index)
+         {
+            element.addEventListener('click',function ()
+             {
+                // console.log(element);    
+                // console.log(index);
+                console.log(this.offsetWidth); //it provides element s width 
+                this.nextElementSibling.remove();
+            })    
+        })
+    </script>
+
+</body>
+</html>
