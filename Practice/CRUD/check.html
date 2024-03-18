@@ -49,7 +49,7 @@
             
             let th3=document.createElement('th');
             let update=document.createElement('button');
-            update.id='updateId';
+            update.className='updateClass';
             update.textContent='Update'
             let th4=document.createElement('th');
             let del=document.createElement('button');
@@ -68,6 +68,7 @@
            // console.log(trclass);
 
            let removeButton=document.querySelectorAll('.del1');
+           let updateClass=document.querySelectorAll('.updateClass');
             
             trclass.forEach(function (element)
              {
@@ -88,6 +89,18 @@
                     
                 })
             })
+
+
+            updateClass.forEach(function (element2)
+             {
+
+                element2.addEventListener('click',function ()
+                 {
+                    input1.value=th1.textContent;    
+                })
+                
+            })
+
 
 
             })
