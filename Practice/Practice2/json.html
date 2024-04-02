@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json</title>
+</head>
+<body>
+    <form action="" onsubmit="data1(event)">
+
+        <input type="text" name="" id="nameid" placeholder="Enter Name">
+        <input type="text" name="" id="subid" placeholder="Enter subject">
+        <input type="text" name="" id="cityid" placeholder="Enter city">
+        <input type="submit" value="submit" id="">
+    </form>
+    <script>
+       function data1(e)
+       {
+        e.preventDefault();
+        let name=document.getElementById('nameid');
+        let sub=document.getElementById('subid');
+        let city=document.getElementById('cityid');
+        // console.log(nameid.value);
+
+        let object={name:nameid.value,
+            sub:sub.value,
+            city:city.value
+        };
+        console.log(object);
+
+        JSON.stringify(localStorage.setItem('student',object));
+        // console.log(dt1);
+       }
+    </script>
+</body>
+</html>

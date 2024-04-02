@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <style>
+        *
+        {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+        }
+        .container
+        {
+            display: flex;
+            position: relative;
+        }
+        .container div
+        {
+            width: 250px;
+            height: 300px;
+            border: 2px solid black;
+            position: absolute;
+            margin: 20px;
+        }
+        .card1
+        {
+            background-color: red;
+        }
+        .card2
+        {
+            background-color: green;
+        }
+        .card3
+        {
+            background-color: blue;
+        }
+        .card4
+        {
+            background-color:teal;
+        }
+        .card5
+        {
+            background-color: yellow;
+        }
+        .card5:hover,.card4:hover
+        {
+            transform: rotate(20deg);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card1"></div>
+        <div class="card2"></div>
+        <div class="card3"></div>
+        <div class="card4"></div>
+        <div class="card5"></div>
+    </div>
+</body>
+</html>
